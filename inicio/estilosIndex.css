@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background: linear-gradient(135deg, #01229E, #01E584);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.titulo-index {
+    margin: 10px auto 0px auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #00ff9385, #01229eb3);
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 11px 15px 70px -29px rgba(0, 0, 0, 0.8);
+}
+
+.parrafo-index {
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: 20px 0px 40px 0px;
+
+}
+
+.agrega-txt {
+    margin: -10px auto 20px auto;
+    font-weight: 600;
+    font-size: 30px;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #00ff9385, #01229eb3);
+}
+
+.mis-tableros-txt {
+    margin: 50px auto 5px auto;
+    font-weight: 600;
+    font-size: 30px;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #00ff9385, #01229eb3);
+}
+
+.seleccionar {
+    margin: auto;
+    border: 2px solid transparent;
+    width: 200px;
+    height: 2.2em;
+    padding-left: .5em;
+    outline: none;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn-tablero {
+    margin: auto;
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(135deg, #01ff93, #01569e);
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 1px 4px 0px rgb(0 114 255);
+    transition-duration: .1s;
+}
+
+.btn-tablero:active {
+    transform: translate(2px, 0px);
+    box-shadow: 0px 0px 0px rgb(0 114 255);
+    padding-bottom: 0px;
+}
+
+.cuadrado-contenido {
+    box-shadow: 11px 15px 70px -29px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    background: #00b8ff45;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px
+}
+
+.board {
+    width: 100%;
+    text-align: center;
+    margin: 100px 10px 10px 10px;
+    padding: 10px;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite que las columnas se ajusten al espacio disponible en pantallas pequeñas */
+}
+
+/* Estilos para el contenedor del tablero */
+.tablero-box {
+    padding: 10px 10px 15px 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    position: relative;
+    /* Para que los elementos absolutos estén posicionados en relación con este contenedor */
+    box-shadow: 11px 15px 70px -29px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos para el botón de eliminación */
+.btn-delete {
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    transition: .3s cubic-bezier(0.69, 0.23, 0.08, 0.98);
+}
+
+.btn-delete:hover {
+    background-color: #ff5c5c66;
+}
+
+.btn-editar {
+    background-color: #ffffff40;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px;
+    transition: .3s cubic-bezier(0.69, 0.23, 0.08, 0.98);
+}
+
+.btn-editar:hover {
+    background-color: #3a3a3a70;
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.tarjeta-nombre {
+    background-image: linear-gradient(-30deg, #0000002e, #ffffffdb);
+    /* Añade un borde a las tarjetas */
+    border-radius: 8px;
+    /* Añade bordes redondeados a las tarjetas */
+    padding: 15px;
+    margin: 10px 0;
+    color: black;
+}
+
+.tablero-title {
+    border-radius: 10px;
+    color: white;
+    background: none;
+    font-size: 50px;
+    margin-top: 50px;
+    /* text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5); */
+    /* Sombreado del texto */
+}
+
+.tablero-nombre-i {
+    margin: auto;
+    border: 2px solid transparent;
+    width: 500px;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.tablero-nombre-i:hover {
+    border: 2px solid #8fc8ff;
+    box-shadow: 0px 0px 0px 5px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+
+.nombre-tarjeta {
+    margin: auto;
+    border: 2px solid transparent;
+    width: 100%;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #f3f3f3a8;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.nombre-tarjeta:hover {
+    border: 2px solid #8fc8ff;
+    box-shadow: 0px 0px 0px 5px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+.nombre-tarjeta:focus {
+    border: 2px solid #3590e7;
+    box-shadow: 0px 0px 0px 5px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+
+.parrafo-tarjeta {
+    background-color: #ffffff91;
+    /* Cambia el color de fondo predeterminado según tus preferencias */
+    border: 2px solid #ccc;
+    /* Añade un borde a las tarjetas */
+    border-radius: 10px;
+    /* Añade bordes redondeados a las tarjetas */
+    padding: 10px 0px;
+    margin: 5px 0px 10px 0px;
+    color: black;
+}
+
+.parrafo-tablero {
+    background-color: #ffffff91;
+    /* Cambia el color de fondo predeterminado según tus preferencias */
+    border: 2px solid #ccc;
+    /* Añade un borde a las tarjetas */
+    border-radius: 10px;
+    /* Añade bordes redondeados a las tarjetas */
+    padding: 30px;
+    color: black;
+    width: 80%;
+    margin: 30px auto 20px auto;
+}
+
+
+
+
+.btn-tarjeta {
+    margin: auto;
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(135deg, #01ff93, #01569e);
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 1px 4px 0px rgb(0 114 255);
+    transition-duration: .1s;
+}
+
+.btn-tarjeta:active {
+    transform: translate(2px, 0px);
+    box-shadow: 0px 1px 0px rgb(0 114 255);
+    padding-bottom: 1px;
+}
+
+
+/* Estilos para los botones de editar y eliminar en las tarjetas */
+.botones-tarjeta {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    display: flex;
+    gap: 5px;
+    /* Espacio entre los botones */
+    background-color: transparent;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 96%;
+}
+
+.btn-editar-tarjeta {
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    background-color: #ffffffde;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.69, 0.23, 0.08, 0.98);
+}
+
+.btn-eliminar-tarjeta {
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.69, 0.23, 0.08, 0.98);
+}
+
+.btn-eliminar-tarjeta:hover {
+    background-color: #ff5c5c;
+}
+
+.btn-editar-tarjeta:hover {
+    background-color: #5c9dff;
+    color: white;
+}
+
+.btn-editar-tarjeta i,
+.btn-eliminar-tarjeta i {
+    margin-right: 5px;
+    /* Espacio entre el icono y el texto */
+}
+
+/* Ajuste para la alineación del texto en la tarjeta */
+.tarjeta {
+    position: relative;
+}
+
+.tarjeta-nombre {
+
+    /* Ajusta el margen del texto para evitar espacio adicional */
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 1;
+
+    /* padding-left: 20%; */
+}
+
+
+
+#nueva_tarjeta {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para las ventanas emergentes */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    max-width: 80%;
+    /* Ajusta según sea necesario */
+    max-height: 50%;
+}
+
+.modal-content {
+    padding: 20px;
+    border: 0px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Estilo para los formularios dentro de las ventanas emergentes */
+.modal form {
+    margin-top: 15px;
+}
+
+.modal form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.modal form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* Estilo para los contenidos dentro de las ventanas emergentes */
+.modal h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.color-tablero {
+    color: white;
+    size: 122px;
+    margin-right: 10px;
+}

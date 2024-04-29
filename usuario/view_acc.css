@@ -1,0 +1,61 @@
+body {
+    font-family: Outfit;
+    background: linear-gradient(135deg, #01229E, #01E584);
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: linear-gradient(#5bffba85, #01229eb3);
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.btn-edit{
+    padding: 5px 10px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    background-color: transparent ;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.btn-edit:hover, .btn-eliminar:hover {
+    background-color: #9cd2d3;
+}
+
+.perfil{padding: 300px 0px;}
